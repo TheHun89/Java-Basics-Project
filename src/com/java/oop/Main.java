@@ -12,19 +12,22 @@ import com.java.oop.Nested.AnonymousClassExample;
 import com.java.oop.Nested.LocalClassExample;
 import com.java.oop.Nested.ShadowTest;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello World");
 
-        Bike b = new Splendor();   //upcasting
+        Bike b = new Splendor();   //upcasting - Splendor extends Bike
         b.run();  // prints running safely with 60km
+        System.out.println("b.speedlimit is " + b.speedlimit); // 90
+
         Bike a = new Bike();
         a.run();   // prints running
         System.out.println("b speed limit is " + b.speedlimit + " and a speed limit is " + a.speedlimit);   //90
+
+        Splendor c = new Splendor();
+        c.run();  // prints running safely with 60km
+        System.out.println("c.speedlimit is " + c.speedlimit); // 150
+
 
         Animal animal = new Lion();
         animal.getSound();
